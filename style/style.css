@@ -52,8 +52,9 @@ header {
 
 
 .slideshow {
-  width: 600px;
-  height: 800px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 3/4;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -92,3 +93,16 @@ header {
 #prev:hover, #next:hover { background: rgba(0,0,0,0.6); }
 
 /* autoplay overlay removed */
+
+/* Make images inside content responsive */
+.conteudo img,
+.myprincess img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .princess { margin: 20px; font-size: 24px; }
+  .conteudo { margin: 12px; padding: 16px; }
+}
